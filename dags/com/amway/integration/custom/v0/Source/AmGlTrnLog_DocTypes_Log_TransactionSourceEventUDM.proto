@@ -1,0 +1,75 @@
+syntax = "proto2";
+
+package com.amway.canonical.pvf.source;
+
+option java_package = "com.amway.canonical";
+option java_outer_classname = "TransactionSourceEventUDM";
+
+message AmGlTrnLog_DocTypes_Log_TransactionSourceEventUDM {
+repeated  SourceEvents SourceEvents = 1;
+optional  string ProcessedService = 2;
+optional  string ProcessedTimestamp = 3;
+optional  string ProcessedServer = 4;
+optional  string ProcessedContextID = 5;
+optional  string SourceApp = 6;
+optional  _env _env = 7;
+}
+message _env {
+optional  string activation = 1;
+optional  int32 appLastSeqn = 2;
+optional  string appPassword = 3;
+optional  int32 appSeqn = 4;
+optional  string appUserName = 5;
+optional  int32 priority = 6;
+optional  string businessContext = 7;
+repeated  int32 controlLabel = 8;
+optional  string errorsTo = 9;
+optional  string errorRequestsTo = 10;
+optional  string locale = 11;
+optional  int32 maxResults = 12;
+optional  string replyTo = 13;
+optional  int32 runLevel = 14;
+optional  bytes signature = 15;
+optional  string signatureType = 16;
+optional  int32 startResult = 17;
+optional  int32 tag = 18;
+optional  string trackId = 19;
+optional  string transactionId = 20;
+optional  string transformState = 21;
+optional  int32 age = 22;
+optional  string connectionIntegrity = 23;
+optional  string destId = 24;
+optional  int64 enqueueTime = 25;
+optional  string logBroker = 26;
+optional  string logHost = 27;
+optional  string pubDistinguishedName = 28;
+optional  string pubId = 29;
+optional  bytes pubNetAddr = 30;
+optional  int64 pubSeqn = 31;
+repeated  int32 pubLabel = 32;
+optional  int64 recvTime = 33;
+repeated  _env_route route = 34;
+optional  string uuid = 35;
+optional  string status = 36;
+}
+message _env_route {
+optional  string broker = 1;
+optional  int64 recvTime = 2;
+optional  int64 enqueueTime = 3;
+}
+message SourceEvents {
+optional  string TransactionEventID = 1;
+optional  string TransactionSourceObject = 2;
+optional  string TransactionSourceTimestamp = 3;
+optional  string AffilateCode = 4;
+repeated  TransactionValues TransactionValues = 5;
+repeated  TransactionKeys TransactionKeys = 6;
+}
+message TransactionValues {
+optional  string key = 1;
+optional  string value = 2;
+}
+message TransactionKeys {
+optional  string key = 1;
+optional  string value = 2;
+}
