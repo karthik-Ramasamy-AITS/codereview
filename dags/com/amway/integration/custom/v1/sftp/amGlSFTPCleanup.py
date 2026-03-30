@@ -119,5 +119,3 @@ class AmGlSFTPCleanup(BaseOperator):
                      )	
             raise AirflowException(f"exception while cleanup , error: {e}")
         return status, error
-asfasasg
-asasgasg
