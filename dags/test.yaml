@@ -1,0 +1,5 @@
+##wms server configs
+wms.APAC2.host:
+  secret: WMS_API_APAC2_AUTH_DEV
+  field: resource
+wms.APAC2.port: 4510
